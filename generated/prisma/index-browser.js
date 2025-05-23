@@ -122,11 +122,11 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
 
 exports.Prisma.WaitlistScalarFieldEnum = {
   id: 'id',
-  fullName: 'fullName',
+  full_name: 'full_name',
   email: 'email',
-  phoneNumber: 'phoneNumber',
+  phone_number: 'phone_number',
   more: 'more',
-  createdAt: 'createdAt'
+  created_at: 'created_at'
 };
 
 exports.Prisma.SortOrder = {

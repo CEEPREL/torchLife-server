@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KruiseKonnect Email</title>
+    <style>
+      body {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        background-color: #f4f8fc;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+
+      .email-wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border: 1px solid #e0e6f1;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .header {
+        background-color: #d0e7ff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .header h1 {
+        margin: 0;
+        font-size: 24px;
+        color: #003366;
+      }
+
+      .content {
+        padding: 30px 20px;
+      }
+
+      .content h2 {
+        color: #004a99;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .formatted {
+        line-height: 1.6;
+        font-size: 16px;
+      }
+
+      .bold-highlight {
+        font-weight: bold;
+        font-size: 18px;
+        color: #002b60;
+      }
+
+      .footer {
+        text-align: center;
+        font-size: 14px;
+        color: #888;
+        padding: 20px;
+        background-color: #f0f5fc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-wrapper">
+      <div class="header">
+        <h1>KruiseKonnect</h1>
+      </div>
+      <div class="content">
+        <h2 class="greeting">Hello {{user}},</h2>
+
+        <!-- START: Message from Admin -->
+        <p class="formatted">{{{parsedMessage}}}</p>
+        <!-- END: Message from Admin -->
+
+        <p style="margin-top: 30px">
+          Warm regards,<br />The KruiseKonnect Team
+        </p>
+      </div>
+      <div class="footer">&copy; 2025 KruiseKonnect. All rights reserved.</div>
+    </div>
+  </body>
+</html>

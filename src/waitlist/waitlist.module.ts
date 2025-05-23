@@ -1,13 +1,11 @@
 import { Module } from '@nestjs/common';
 import { WaitlistResolver } from './waitlist.resolver';
 import { WaitlistService } from './waitlist.service';
-import { PrismaService } from 'src/prisma/prisma.service'; // Use PrismaService
+import { PrismaService } from 'src/prisma/prisma.service';
+import { MailerModule } from 'src/mailer/mailer.modules';
 
 @Module({
-  providers: [
-    WaitlistService,
-    WaitlistResolver,
-    PrismaService, 
-  ],
+  imports: [MailerModule],
+  providers: [WaitlistService, WaitlistResolver, PrismaService],
 })
 export class WaitlistModule {}

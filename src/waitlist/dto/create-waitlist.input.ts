@@ -6,7 +6,7 @@ import { IsEmail, IsNotEmpty, IsOptional } from 'class-validator';
 export class CreateWaitlistInput {
   @Field()
   @IsNotEmpty()
-  fullName: string;
+  full_name: string;
 
   @Field()
   @IsEmail()
@@ -14,7 +14,7 @@ export class CreateWaitlistInput {
 
   @Field()
   @IsNotEmpty()
-  phoneNumber: string;
+  phone_number: string;
 
   @Field({ nullable: true })
   @IsOptional()

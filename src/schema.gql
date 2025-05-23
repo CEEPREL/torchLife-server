@@ -4,9 +4,9 @@
 
 input CreateWaitlistInput {
   email: String!
-  fullName: String!
+  full_name: String!
   more: String
-  phoneNumber: String!
+  phone_number: String!
 }
 
 """
@@ -23,10 +23,10 @@ type Query {
 }
 
 type Waitlist {
-  createdAt: DateTime!
+  created_at: DateTime!
   email: String!
-  fullName: String!
+  full_name: String!
   id: Int!
   more: String
-  phoneNumber: String!
+  phone_number: String!
 }

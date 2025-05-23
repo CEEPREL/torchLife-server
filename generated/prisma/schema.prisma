@@ -15,10 +15,12 @@ datasource db {
 }
 
 model Waitlist {
-  id          Int      @id @default(autoincrement())
-  fullName    String
-  email       String   @unique
-  phoneNumber String
-  more        String?
-  createdAt   DateTime @default(now())
+  id           Int      @id @default(autoincrement())
+  full_name    String
+  email        String   @unique
+  phone_number String
+  more         String?
+  created_at   DateTime @default(now())
+
+  @@map("waitlists")
 }

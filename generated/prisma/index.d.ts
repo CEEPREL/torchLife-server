@@ -891,29 +891,29 @@ export namespace Prisma {
 
   export type WaitlistMinAggregateOutputType = {
     id: number | null
-    fullName: string | null
+    full_name: string | null
     email: string | null
-    phoneNumber: string | null
+    phone_number: string | null
     more: string | null
-    createdAt: Date | null
+    created_at: Date | null
   }
 
   export type WaitlistMaxAggregateOutputType = {
     id: number | null
-    fullName: string | null
+    full_name: string | null
     email: string | null
-    phoneNumber: string | null
+    phone_number: string | null
     more: string | null
-    createdAt: Date | null
+    created_at: Date | null
   }
 
   export type WaitlistCountAggregateOutputType = {
     id: number
-    fullName: number
+    full_name: number
     email: number
-    phoneNumber: number
+    phone_number: number
     more: number
-    createdAt: number
+    created_at: number
     _all: number
   }
 
@@ -928,29 +928,29 @@ export namespace Prisma {
 
   export type WaitlistMinAggregateInputType = {
     id?: true
-    fullName?: true
+    full_name?: true
     email?: true
-    phoneNumber?: true
+    phone_number?: true
     more?: true
-    createdAt?: true
+    created_at?: true
   }
 
   export type WaitlistMaxAggregateInputType = {
     id?: true
-    fullName?: true
+    full_name?: true
     email?: true
-    phoneNumber?: true
+    phone_number?: true
     more?: true
-    createdAt?: true
+    created_at?: true
   }
 
   export type WaitlistCountAggregateInputType = {
     id?: true
-    fullName?: true
+    full_name?: true
     email?: true
-    phoneNumber?: true
+    phone_number?: true
     more?: true
-    createdAt?: true
+    created_at?: true
     _all?: true
   }
 
@@ -1042,11 +1042,11 @@ export namespace Prisma {
 
   export type WaitlistGroupByOutputType = {
     id: number
-    fullName: string
+    full_name: string
     email: string
-    phoneNumber: string
+    phone_number: string
     more: string | null
-    createdAt: Date
+    created_at: Date
     _count: WaitlistCountAggregateOutputType | null
     _avg: WaitlistAvgAggregateOutputType | null
     _sum: WaitlistSumAggregateOutputType | null
@@ -1070,52 +1070,52 @@ export namespace Prisma {
 
   export type WaitlistSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    fullName?: boolean
+    full_name?: boolean
     email?: boolean
-    phoneNumber?: boolean
+    phone_number?: boolean
     more?: boolean
-    createdAt?: boolean
+    created_at?: boolean
   }, ExtArgs["result"]["waitlist"]>
 
   export type WaitlistSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    fullName?: boolean
+    full_name?: boolean
     email?: boolean
-    phoneNumber?: boolean
+    phone_number?: boolean
     more?: boolean
-    createdAt?: boolean
+    created_at?: boolean
   }, ExtArgs["result"]["waitlist"]>
 
   export type WaitlistSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    fullName?: boolean
+    full_name?: boolean
     email?: boolean
-    phoneNumber?: boolean
+    phone_number?: boolean
     more?: boolean
-    createdAt?: boolean
+    created_at?: boolean
   }, ExtArgs["result"]["waitlist"]>
 
   export type WaitlistSelectScalar = {
     id?: boolean
-    fullName?: boolean
+    full_name?: boolean
     email?: boolean
-    phoneNumber?: boolean
+    phone_number?: boolean
     more?: boolean
-    createdAt?: boolean
+    created_at?: boolean
   }
 
-  export type WaitlistOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "fullName" | "email" | "phoneNumber" | "more" | "createdAt", ExtArgs["result"]["waitlist"]>
+  export type WaitlistOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "full_name" | "email" | "phone_number" | "more" | "created_at", ExtArgs["result"]["waitlist"]>
 
   export type $WaitlistPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Waitlist"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: number
-      fullName: string
+      full_name: string
       email: string
-      phoneNumber: string
+      phone_number: string
       more: string | null
-      createdAt: Date
+      created_at: Date
     }, ExtArgs["result"]["waitlist"]>
     composites: {}
   }
@@ -1540,11 +1540,11 @@ export namespace Prisma {
    */
   interface WaitlistFieldRefs {
     readonly id: FieldRef<"Waitlist", 'Int'>
-    readonly fullName: FieldRef<"Waitlist", 'String'>
+    readonly full_name: FieldRef<"Waitlist", 'String'>
     readonly email: FieldRef<"Waitlist", 'String'>
-    readonly phoneNumber: FieldRef<"Waitlist", 'String'>
+    readonly phone_number: FieldRef<"Waitlist", 'String'>
     readonly more: FieldRef<"Waitlist", 'String'>
-    readonly createdAt: FieldRef<"Waitlist", 'DateTime'>
+    readonly created_at: FieldRef<"Waitlist", 'DateTime'>
   }
     
 
@@ -1927,11 +1927,11 @@ export namespace Prisma {
 
   export const WaitlistScalarFieldEnum: {
     id: 'id',
-    fullName: 'fullName',
+    full_name: 'full_name',
     email: 'email',
-    phoneNumber: 'phoneNumber',
+    phone_number: 'phone_number',
     more: 'more',
-    createdAt: 'createdAt'
+    created_at: 'created_at'
   };
 
   export type WaitlistScalarFieldEnum = (typeof WaitlistScalarFieldEnum)[keyof typeof WaitlistScalarFieldEnum]
@@ -2030,20 +2030,20 @@ export namespace Prisma {
     OR?: WaitlistWhereInput[]
     NOT?: WaitlistWhereInput | WaitlistWhereInput[]
     id?: IntFilter<"Waitlist"> | number
-    fullName?: StringFilter<"Waitlist"> | string
+    full_name?: StringFilter<"Waitlist"> | string
     email?: StringFilter<"Waitlist"> | string
-    phoneNumber?: StringFilter<"Waitlist"> | string
+    phone_number?: StringFilter<"Waitlist"> | string
     more?: StringNullableFilter<"Waitlist"> | string | null
-    createdAt?: DateTimeFilter<"Waitlist"> | Date | string
+    created_at?: DateTimeFilter<"Waitlist"> | Date | string
   }
 
   export type WaitlistOrderByWithRelationInput = {
     id?: SortOrder
-    fullName?: SortOrder
+    full_name?: SortOrder
     email?: SortOrder
-    phoneNumber?: SortOrder
+    phone_number?: SortOrder
     more?: SortOrderInput | SortOrder
-    createdAt?: SortOrder
+    created_at?: SortOrder
   }
 
   export type WaitlistWhereUniqueInput = Prisma.AtLeast<{
@@ -2052,19 +2052,19 @@ export namespace Prisma {
     AND?: WaitlistWhereInput | WaitlistWhereInput[]
     OR?: WaitlistWhereInput[]
     NOT?: WaitlistWhereInput | WaitlistWhereInput[]
-    fullName?: StringFilter<"Waitlist"> | string
-    phoneNumber?: StringFilter<"Waitlist"> | string
+    full_name?: StringFilter<"Waitlist"> | string
+    phone_number?: StringFilter<"Waitlist"> | string
     more?: StringNullableFilter<"Waitlist"> | string | null
-    createdAt?: DateTimeFilter<"Waitlist"> | Date | string
+    created_at?: DateTimeFilter<"Waitlist"> | Date | string
   }, "id" | "email">
 
   export type WaitlistOrderByWithAggregationInput = {
     id?: SortOrder
-    fullName?: SortOrder
+    full_name?: SortOrder
     email?: SortOrder
-    phoneNumber?: SortOrder
+    phone_number?: SortOrder
     more?: SortOrderInput | SortOrder
-    createdAt?: SortOrder
+    created_at?: SortOrder
     _count?: WaitlistCountOrderByAggregateInput
     _avg?: WaitlistAvgOrderByAggregateInput
     _max?: WaitlistMaxOrderByAggregateInput
@@ -2077,71 +2077,71 @@ export namespace Prisma {
     OR?: WaitlistScalarWhereWithAggregatesInput[]
     NOT?: WaitlistScalarWhereWithAggregatesInput | WaitlistScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"Waitlist"> | number
-    fullName?: StringWithAggregatesFilter<"Waitlist"> | string
+    full_name?: StringWithAggregatesFilter<"Waitlist"> | string
     email?: StringWithAggregatesFilter<"Waitlist"> | string
-    phoneNumber?: StringWithAggregatesFilter<"Waitlist"> | string
+    phone_number?: StringWithAggregatesFilter<"Waitlist"> | string
     more?: StringNullableWithAggregatesFilter<"Waitlist"> | string | null
-    createdAt?: DateTimeWithAggregatesFilter<"Waitlist"> | Date | string
+    created_at?: DateTimeWithAggregatesFilter<"Waitlist"> | Date | string
   }
 
   export type WaitlistCreateInput = {
-    fullName: string
+    full_name: string
     email: string
-    phoneNumber: string
+    phone_number: string
     more?: string | null
-    createdAt?: Date | string
+    created_at?: Date | string
   }
 
   export type WaitlistUncheckedCreateInput = {
     id?: number
-    fullName: string
+    full_name: string
     email: string
-    phoneNumber: string
+    phone_number: string
     more?: string | null
-    createdAt?: Date | string
+    created_at?: Date | string
   }
 
   export type WaitlistUpdateInput = {
-    fullName?: StringFieldUpdateOperationsInput | string
+    full_name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    phoneNumber?: StringFieldUpdateOperationsInput | string
+    phone_number?: StringFieldUpdateOperationsInput | string
     more?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type WaitlistUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
-    fullName?: StringFieldUpdateOperationsInput | string
+    full_name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    phoneNumber?: StringFieldUpdateOperationsInput | string
+    phone_number?: StringFieldUpdateOperationsInput | string
     more?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type WaitlistCreateManyInput = {
     id?: number
-    fullName: string
+    full_name: string
     email: string
-    phoneNumber: string
+    phone_number: string
     more?: string | null
-    createdAt?: Date | string
+    created_at?: Date | string
   }
 
   export type WaitlistUpdateManyMutationInput = {
-    fullName?: StringFieldUpdateOperationsInput | string
+    full_name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    phoneNumber?: StringFieldUpdateOperationsInput | string
+    phone_number?: StringFieldUpdateOperationsInput | string
     more?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type WaitlistUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
-    fullName?: StringFieldUpdateOperationsInput | string
+    full_name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    phoneNumber?: StringFieldUpdateOperationsInput | string
+    phone_number?: StringFieldUpdateOperationsInput | string
     more?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -2203,11 +2203,11 @@ export namespace Prisma {
 
   export type WaitlistCountOrderByAggregateInput = {
     id?: SortOrder
-    fullName?: SortOrder
+    full_name?: SortOrder
     email?: SortOrder
-    phoneNumber?: SortOrder
+    phone_number?: SortOrder
     more?: SortOrder
-    createdAt?: SortOrder
+    created_at?: SortOrder
   }
 
   export type WaitlistAvgOrderByAggregateInput = {
@@ -2216,20 +2216,20 @@ export namespace Prisma {
 
   export type WaitlistMaxOrderByAggregateInput = {
     id?: SortOrder
-    fullName?: SortOrder
+    full_name?: SortOrder
     email?: SortOrder
-    phoneNumber?: SortOrder
+    phone_number?: SortOrder
     more?: SortOrder
-    createdAt?: SortOrder
+    created_at?: SortOrder
   }
 
   export type WaitlistMinOrderByAggregateInput = {
     id?: SortOrder
-    fullName?: SortOrder
+    full_name?: SortOrder
     email?: SortOrder
-    phoneNumber?: SortOrder
+    phone_number?: SortOrder
     more?: SortOrder
-    createdAt?: SortOrder
+    created_at?: SortOrder
   }
 
   export type WaitlistSumOrderByAggregateInput = {

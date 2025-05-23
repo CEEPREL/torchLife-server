@@ -6,17 +6,17 @@ export class Waitlist {
   id: number;
 
   @Field()
-  fullName: string;
+  full_name: string;
 
   @Field()
   email: string;
 
   @Field()
-  phoneNumber: string;
+  phone_number: string;
 
   @Field({nullable:true})
   more?: string;
 
   @Field(() => Date)
-  createdAt: Date;
+  created_at: Date;
 }

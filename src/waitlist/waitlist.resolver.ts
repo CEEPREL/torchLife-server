@@ -1,8 +1,9 @@
 import { Resolver, Mutation, Args, Query } from '@nestjs/graphql';
 import { WaitlistService } from './waitlist.service';
-import { Waitlist } from './entities/waitlist.entity';
+// import { Waitlist } from './entities/waitlist.entity';
 import { CreateWaitlistInput } from './dto/create-waitlist.input';
 import { Waitlist as PrismaWaitlist } from 'generated/prisma'; // Adjust path
+import { Waitlist } from 'src/graphQL/model/user.model';
 
 @Resolver(() => Waitlist)
 export class WaitlistResolver {
@@ -26,11 +27,11 @@ export class WaitlistResolver {
   private toGraphQL(entry: PrismaWaitlist): Waitlist {
     return {
       id: entry.id,
-      fullName: entry.fullName,
+      full_name: entry.full_name,
       email: entry.email,
-      phoneNumber: entry.phoneNumber,
+      phone_number: entry.phone_number,
       more: entry.more ?? undefined,
-      createdAt: entry.createdAt,
+      created_at: entry.created_at,
     };
   }
 }
