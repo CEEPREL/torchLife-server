@@ -25,7 +25,7 @@ export class WaitlistService {
     // 3. Send the HTML email
     await this.mailerService.sendHtmlEmail(
       input.email,
-      'You’ve Joined the Waitlist!',
+      'TorchLife Africa WaitList.',
       html
     );
 
