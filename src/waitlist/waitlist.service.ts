@@ -13,6 +13,12 @@ export class WaitlistService {
 
   async create(input: CreateWaitlistInput): Promise<PrismaWaitlist> {
     // 1. Create new waitlist entry
+    const emailExists = await this.prisma.waitlist.findUnique({
+      where: { email: input.email },
+    });
+    if (emailExists) {
+      throw new Error('Email already exists');
+    }
     const newEntry = await this.prisma.waitlist.create({
       data: input,
     });
@@ -26,7 +32,7 @@ export class WaitlistService {
     await this.mailerService.sendHtmlEmail(
       input.email,
       'TorchLife Africa WaitList.',
-      html
+      html,
     );
 
     return newEntry;
