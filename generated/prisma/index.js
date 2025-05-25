@@ -168,8 +168,8 @@ const config = {
       }
     }
   },
-  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Waitlist {\n  id           Int      @id @default(autoincrement())\n  full_name    String\n  email        String   @unique\n  phone_number String\n  more         String?\n  created_at   DateTime @default(now())\n\n  @@map(\"waitlists\")\n}\n",
-  "inlineSchemaHash": "d2e3a8e3207484994d769a86249547b435d5192294896c149624336900471987",
+  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions??\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Waitlist {\n  id           Int      @id @default(autoincrement())\n  full_name    String\n  email        String   @unique\n  phone_number String\n  more         String?\n  created_at   DateTime @default(now())\n\n  @@map(\"waitlists\")\n}\n",
+  "inlineSchemaHash": "ef40628afb124d59c3b3e33e2f7ab18fd6240bf177c2d8ff85cd7e19233799ac",
   "copyEngine": true
 }
 
